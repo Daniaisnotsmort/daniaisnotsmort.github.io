@@ -1,41 +1,174 @@
-.gallery-images{
+@import url("https://use.typekit.net/nmg4pzk.css");
+@import url("https://use.typekit.net/nmg4pzk.css");
+
+:root {
+    --light-color: rgb(236, 237, 237);
+    --dark-color: rgba(0, 0, 0, 0.66);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+nav {
+    padding: 0.625rem;
+    text-align: center;
+}
+
+#menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+
+}
+
+#menu a {
+    text-decoration: none;
+    color: white
+}
+
+#menu a:hover {
+    color: aqua;
+}
+
+
+#menu.active {
+    display: flex;
+}
+
+
+.second-main img {
+    padding-left: 2rem;
+    margin-top: 2rem;
+    width: 40rem;
+}
+
+.gallery-images {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    max-width: 1200px;
+    max-width: 75rem;
     margin: 0 auto;
 }
-.gallery-images img{
-width: 100%;
-height: 100%;
-object-fit: cover;
-border: solid red 5px;
+
+.gallery-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
 }
-.hero{
-    background-image: url(../images/HINATA\ +\ KAGEYAMA\ \(1\).jpeg);
+
+
+li {
+    list-style-type: none;
+}
+
+.hero {
+    background-image: url(../images/Mineko_\ riot\,\ Dao\ Trong\ Le.jpeg);
     background-size: cover;
-    min-height: 400px;
+    min-height: 40rem;
     display: flex;
-flex-direction: column;
-justify-content:center;
-align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.hero h2, .hero p{
-    background-color: blueviolet;
-    color: aliceblue;
-    padding: 10px 20px;
+.hero h1 {
+    font-family: "linotype-didot", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 0.625rem 1.25rem;
+    width: 35%;
 }
 
+.hero-heading {
+    font-size: 5rem;
+}
 
-@media screen and (max-width: 768px){
-    .gallery-images{
+section h2 {
+    font-family: "linotype-didot", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    font-size: 8rem;
+    padding-left: 2rem;
+}
+
+section p {
+    font-family: "montserrat", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    color: white;
+    padding-left: 2rem;
+    padding-right: 10rem;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+}
+
+/* Tablet*/
+@media screen and (max-width: 48em) {
+    .gallery-images {
         grid-template-columns: 1fr 1fr;
     }
-    
+
+    .second-main img {
+        width: 30rem;
+    }
+
+    section h2 {
+        font-size: 4rem;
+        padding-left: 2rem;
+    }
+
+    section p {
+        font-size: 1rem;
+        padding-left: 2rem;
+        padding-right: 3rem;
+    }
 }
-    
-@media screen and (max-width: 480px){
-    .gallery-images{
+
+/* Phone*/
+
+@media screen and (max-width: 30em) {
+    .gallery-images {
         grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 19rem;
+    }
+
+    #menu {
+
+        position: absolute;
+        flex-direction: column;
+        right: 20px;
+        background-color: var(--dark-color);
+        padding: 10px;
+    }
+
+    .second-main img {
+        width: 20rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+
+    }
+
+    section p {
+        font-size: 1rem;
+
     }
 }
