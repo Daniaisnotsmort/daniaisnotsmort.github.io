@@ -121,6 +121,9 @@ section p {
     .gallery-images {
         grid-template-columns: 1fr 1fr;
     }
+    .hero{
+        min-height: 30rem;
+    }
 
     .second-main img {
         width: 30rem;
